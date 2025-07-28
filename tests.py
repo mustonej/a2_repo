@@ -38,5 +38,13 @@ class TestCheckPwd(unittest.TestCase):
         result = check_pwd("KLEa7495!")
         self.assertTrue(result)
 
+    def test_8_character_passes(self):
+        result = check_pwd("KLEa7495")
+        self.assertTrue(result)
+    
+    def test_20_character_passes(self):
+        result = check_pwd("KLEa7495!KLEa7495!KL")
+        self.assertTrue(result)
+
 if __name__ == "__main__":
     unittest.main()
