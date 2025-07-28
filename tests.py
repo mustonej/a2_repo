@@ -13,6 +13,10 @@ class TestCheckPwd(unittest.TestCase):
     def test_long_password_passes(self):
         result = check_pwd("Passwordthatistoolong1234566")
         self.assertTrue(result)
+    
+    def test_no_lowercase_fails(self):
+        result = check_pwd("KLEA7495!")
+        self.assertFalse(result)
 
 if __name__ == "__main__":
     unittest.main()
