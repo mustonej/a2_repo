@@ -18,5 +18,9 @@ class TestCheckPwd(unittest.TestCase):
         result = check_pwd("KLEA7495!")
         self.assertFalse(result)
 
+    def test_no_uppercase_fails(self):
+        result = check_pwd("klea7495!")
+        self.assertFalse(result)
+
 if __name__ == "__main__":
     unittest.main()
