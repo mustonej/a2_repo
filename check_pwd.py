@@ -4,12 +4,16 @@ def check_pwd(password):
 
     has_lowercase = False
     has_uppercase = False
+    has_digit = False
+
     for character in password:
         if character >= 'a' and character <= 'z':
             has_lowercase = True
         if character >= 'A' and character <= 'Z':
             has_uppercase = True
+        if character >= '0' and character <= '9':
+            has_digit = True
 
-    if not has_lowercase or not has_uppercase:
+    if not has_lowercase or not has_uppercase or not has_digit:
         return False
     return True
