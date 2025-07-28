@@ -30,5 +30,9 @@ class TestCheckPwd(unittest.TestCase):
         result = check_pwd("KLEA7495")
         self.assertFalse(result)
 
+    def test_wrong_symbol_fails(self):
+        result = check_pwd("KLEA7495{}")
+        self.assertFalse(result)
+
 if __name__ == "__main__":
     unittest.main()
