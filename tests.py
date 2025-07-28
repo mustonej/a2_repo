@@ -39,7 +39,7 @@ class TestCheckPwd(unittest.TestCase):
         self.assertTrue(result)
 
     def test_8_character_passes(self):
-        result = check_pwd("KLEa7495")
+        result = check_pwd("KLEa@495")
         self.assertTrue(result)
     
     def test_20_character_passes(self):
