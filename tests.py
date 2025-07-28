@@ -9,6 +9,10 @@ class TestCheckPwd(unittest.TestCase):
     def test_short_password_fails(self):
         result = check_pwd("Ab1!")
         self.assertFalse(result)
+    
+    def test_long_password_passes(self):
+        result = check_pwd("Passwordthatistoolong1234566")
+        self.assertTrue(result)
 
 if __name__ == "__main__":
     unittest.main()
